@@ -5,11 +5,11 @@ echo Iniciando o Gestor de Arquivos...
 echo.
 
 SET DISCO_BASE=C:
-SET BASE_DIR=%DISCO_BASE%\Arquivos
-SET DOCS_DIR=%BASE_DIR%\Documentação
-SET LOGS_DIR=%BASE_DIR%\Informações
-SET BACKUP_DIR=%BASE_DIR%\Backups
-SET LOG_FILE=%LOGS_DIR%\atividade.log
+SET BASE_DIR=%DISCO_BASE%\Arquivos da Loja
+SET DOCS_DIR=%BASE_DIR%\Documentacao
+SET LOGS_DIR=%BASE_DIR%\Informacoes
+SET BACKUP_DIR=%BASE_DIR%\CopiasSeguranca
+SET LOG_FILE=%LOGS_DIR%\registro_de_tarefas.txt
 
 SET /A cont_pastas=0
 SET /A cont_arquivos=0
@@ -22,11 +22,11 @@ CALL :logar "Script" "Iniciado"
 CALL :criar_pasta "%BASE_DIR%" "Pasta Base"
 CALL :criar_pasta "%INFO_DIR%" "Pasta Info"
 CALL :criar_pasta "%DOCS_DIR%" "Pasta Documentação"
-CALL :criar_pasta "%BACKUP_DIR%" "Pasta Backups"
+CALL :criar_pasta "%BACKUP_DIR%" "Pasta CopiasSeguranca"
 
 echo [2] Criando arquivos de exemplo...
-SET "ARQ1=%DOCS_DIR%\relatorio.txt"
-SET "ARQ2=%DOCS_DIR%\dados.csv"
+SET "ARQ1=%DOCS_DIR%\vendas_dia.txt"
+SET "ARQ2=%DOCS_DIR%\produtos.csv"
 SET "ARQ3=%DOCS_DIR%\config.ini"
 
 (
