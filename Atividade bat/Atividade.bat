@@ -5,9 +5,9 @@ echo Iniciando o Gestor de Arquivos...
 echo.
 
 SET DISCO_BASE=C:
-SET BASE_DIR=%DISCO_BASE%\GestorArquivos
-SET DOCS_DIR=%BASE_DIR%\Documentos
-SET LOGS_DIR=%BASE_DIR%\Logs
+SET BASE_DIR=%DISCO_BASE%\Arquivos
+SET DOCS_DIR=%BASE_DIR%\Documentação
+SET LOGS_DIR=%BASE_DIR%\Informações
 SET BACKUP_DIR=%BASE_DIR%\Backups
 SET LOG_FILE=%LOGS_DIR%\atividade.log
 
@@ -20,8 +20,8 @@ IF NOT EXIST "%LOGS_DIR%" ( md "%LOGS_DIR%" >nul 2>nul )
 echo [1] Verificando e criando estruturas de pastas...
 CALL :logar "Script" "Iniciado"
 CALL :criar_pasta "%BASE_DIR%" "Pasta Base"
-CALL :criar_pasta "%LOGS_DIR%" "Pasta Logs"
-CALL :criar_pasta "%DOCS_DIR%" "Pasta Documentos"
+CALL :criar_pasta "%INFO_DIR%" "Pasta Info"
+CALL :criar_pasta "%DOCS_DIR%" "Pasta Documentação"
 CALL :criar_pasta "%BACKUP_DIR%" "Pasta Backups"
 
 echo [2] Criando arquivos de exemplo...
@@ -32,16 +32,16 @@ SET "ARQ3=%DOCS_DIR%\config.ini"
 (
     echo [RELATORIO DE VENDAS]
     echo Data: %DATE%
-    echo Total: 150 unidades
+    echo Total: 100 unidades
     echo Responsavel: Vitor Bruno
 ) > "%ARQ1%"
 CALL :logar_criacao_arquivo "relatorio.txt" "%ARQ1%"
 
 (
     echo ID,Produto,Valor
-    echo 101,Monitor,5500.00
+    echo 101,Notebook,5500.00
     echo 102,Teclado,150.50
-    echo 103,Mouse,89.90
+    echo 103,Fone,489.90
 ) > "%ARQ2%"
 CALL :logar_criacao_arquivo "dados.csv" "%ARQ2%"
 
@@ -122,4 +122,5 @@ GOTO :EOF
 :logar
 
 echo %DATE% %TIME% - %~1 - %~2 >> "%LOG_FILE%"
+
 GOTO :EOF
