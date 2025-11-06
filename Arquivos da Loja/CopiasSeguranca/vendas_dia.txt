@@ -1,0 +1,4 @@
+[RELATORIO DE VENDAS]
+Data: 06/11/2025
+Total: 100 unidades
+Responsavel: Vitor Bruno

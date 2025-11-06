@@ -1,0 +1,10 @@
+06/11/2025 20:28:01,61 - Script - Iniciado 
+06/11/2025 20:28:01,63 - Verificar Pasta Base - Ja existe 
+06/11/2025 20:28:01,64 - Criar Pasta Info - Falha 
+06/11/2025 20:28:01,67 - Criar Pasta Documentação - Sucesso 
+06/11/2025 20:28:01,68 - Criar Pasta CopiasSeguranca - Sucesso 
+06/11/2025 20:28:01,70 - Criar arquivo relatorio.txt - Sucesso 
+06/11/2025 20:28:01,72 - Criar arquivo dados.csv - Sucesso 
+06/11/2025 20:28:01,75 - Criar arquivo config.ini - Sucesso 
+06/11/2025 20:28:01,77 - Backup (Copia de Arquivos) - Sucesso 
+06/11/2025 20:28:01,80 - Criar arquivo backup_completo.bak - Sucesso 
